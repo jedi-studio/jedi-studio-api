@@ -18,7 +18,7 @@ const regularFont = fetch(new URL("/public/font.ttf", import.meta.url)).then(
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
 
-  const title = searchParams.get("title") || "sanweb";
+  const title = searchParams.get("title") || "JsonVerse";
   const clean_word = slugify(title, {
     replacement: " ",
     remove: /[*+~.()'"!:@]/g,
