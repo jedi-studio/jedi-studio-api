@@ -1,6 +1,6 @@
 import { ImageResponse } from "@vercel/og";
 import { NextRequest } from "next/server";
-import Logo from "../../../logo";
+import {VDBLogo} from "../../../logo";
 import slugify from "slugify";
 
 export const runtime = "edge";
@@ -63,20 +63,19 @@ export async function GET(req: NextRequest) {
       >
         <div
           style={{
-            height: "95%",
-            width: "95%",
+            height: "100%",
+            width: "100%",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
             background:
               "radial-gradient(circle, rgba(10,25,47,1) 0%, rgba(13,16,20,1) 90%)",
-            fontSize: 32,
+            fontSize: "4rem",
             fontWeight: 600,
-            borderRadius: 18,
           }}
         >
-          <Logo width="120" height="120" />
+          <VDBLogo width="120" height="120" />
           <div
             style={{
               marginBottom: "-60px",
@@ -88,9 +87,10 @@ export async function GET(req: NextRequest) {
           >
             <div
               style={{
-                fontSize: "16px",
+                fontSize: "18px",
                 color: "rgba(250, 250, 250, 0.5)",
                 display: "flex",
+                marginBottom: "-20px"
               }}
             >
               {typeCleaned}

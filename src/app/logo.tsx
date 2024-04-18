@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-export default function Logo({
+export function VDBLogo({
   width,
   height
 }: Readonly<{
